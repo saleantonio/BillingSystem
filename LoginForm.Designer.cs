@@ -40,6 +40,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.Yellow;
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(138, 47);
             lblTitle.Name = "lblTitle";
@@ -58,6 +59,7 @@
             // 
             // txtUsername
             // 
+            txtUsername.BackColor = Color.FromArgb(192, 255, 192);
             txtUsername.Location = new Point(144, 113);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(213, 27);
@@ -74,29 +76,35 @@
             // 
             // txtPassword
             // 
+            txtPassword.BackColor = Color.FromArgb(192, 255, 192);
             txtPassword.Location = new Point(144, 171);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(213, 27);
             txtPassword.TabIndex = 4;
+            txtPassword.KeyPress += txtPassword_KeyPress;
             // 
             // btnLogin
             // 
+            btnLogin.BackColor = Color.FromArgb(255, 128, 0);
             btnLogin.Location = new Point(76, 254);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnCancel
             // 
+            btnCancel.BackColor = Color.FromArgb(255, 128, 0);
             btnCancel.Location = new Point(291, 254);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(94, 29);
             btnCancel.TabIndex = 6;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // LoginForm
             // 
@@ -115,6 +123,7 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BillingSystem Version 1.0 - Login";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
